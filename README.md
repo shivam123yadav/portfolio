@@ -1,88 +1,105 @@
-# Shivam's Developer Portfolio
+# Shivam Yadav — Developer Portfolio
 
-A modern, fast, responsive developer portfolio featuring dark/light themes, dynamic particle canvas animations, and interactive project showcases. Built with pure HTML5, modern CSS, and vanilla JavaScript.
-
----
-
-## 🚀 How to Deploy on Render
-
-Render hosts static sites completely free with global CDN, automated SSL, and automatic deploys on git push.
-
-### Step 1: Push your project to GitHub
-
-If you haven't initialized Git yet, run these commands in this directory:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: Render deployment ready"
-```
-
-Then create a new repository on [GitHub](https://github.com/new) and push your code:
-
-```bash
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-git push -u origin main
-```
+A fast, responsive, and cinematic developer portfolio featuring dark & light modes, dynamic canvas animations, and interactive project showcases. Built with pure HTML5, modern CSS, and vanilla JavaScript for maximum performance and zero build dependencies.
 
 ---
 
-### Step 2: Deploy on Render
+## ✨ Features
 
-You can deploy using either of these two easy methods:
+- **🌓 Theme Switching**: Seamless dark and light modes with system preference detection and `localStorage` persistence.
+- **🎨 Interactive Canvas & Particles**: Dual-layer animated color mesh and interactive particle network responding to pointer moves.
+- **📱 Fluid & Full-Width Layout**: Modern edge-to-edge layout that scales smoothly across mobile, tablet, and ultra-wide displays.
+- **💼 Interactive Project Showcase**: Tilt and spotlight-enabled 3D cards displaying full-stack projects and tech chips.
+- **🛠 Comprehensive Tech Stack**: Highlights proficiency in C++, Python, JavaScript, React, Node.js, FastAPI, Flask, SQL, Docker, and CS fundamentals.
+- **📋 One-Click Email Copy**: Quick-copy email address (`shivamyadav952004@gmail.com`) with animated confetti burst.
+- **🚀 100% Render Ready**: Preconfigured with `render.yaml` for instant 1-click deployment on Render Static Sites.
 
-#### Method A: Using Render Blueprints (Recommended - 1 Click)
+---
 
-Because this repository includes a [`render.yaml`](render.yaml) file, Render can configure everything automatically:
+## 📁 Project Structure
 
-1. Log in to [dashboard.render.com](https://dashboard.render.com/).
-2. Click **New +** in the top right and select **Blueprint**.
-3. Connect your GitHub repository.
-4. Render will detect `render.yaml` and configure:
+```
+Portfolio/
+├── index.html        # Main entry point (HTML5, styling & scripts)
+├── render.yaml       # Render Blueprint configuration for deployment
+├── package.json      # Scripts for local development server
+├── .gitignore        # Git ignore rules
+└── README.md         # Documentation & deployment guide
+```
+
+---
+
+## 🚀 Deployment on Render
+
+This portfolio is configured for zero-configuration hosting on **Render Static Sites** (Free global CDN, automated SSL, and automatic deploys on every `git push`).
+
+### Method 1: Using Render Blueprint (Recommended — 1 Click)
+
+1. Log in to [Render Dashboard](https://dashboard.render.com/).
+2. Click **New +** in the top right corner and choose **Blueprint**.
+3. Select your repository: **`shivam123yadav/portfolio`**.
+4. Render will read [`render.yaml`](render.yaml) automatically and set up:
    - **Service Type**: Static Site
    - **Publish Directory**: `.` (Root)
-   - **Build Command**: *(None needed)*
-   - **Security Headers & Rewrite Rules**: Preconfigured
-5. Click **Apply**. Your site will be live on a `*.onrender.com` URL within seconds!
+   - **Build Command**: *(None required)*
+   - **Security Headers & Rewrites**: Enabled
+5. Click **Apply**. Your portfolio will be live in seconds!
 
-#### Method B: Manual Static Site Setup
+### Method 2: Manual Static Site Setup
 
-If you prefer setting it up manually without Blueprints:
-
-1. Log in to [dashboard.render.com](https://dashboard.render.com/).
-2. Click **New +** > **Static Site**.
-3. Select your GitHub repository.
-4. Fill in the deployment details:
-   - **Name**: `shivam-portfolio` (or any name you choose)
+1. In the [Render Dashboard](https://dashboard.render.com/), click **New +** → **Static Site**.
+2. Connect your GitHub repository: **`shivam123yadav/portfolio`**.
+3. Configure the fields:
+   - **Name**: `shivam-portfolio` (or your choice)
    - **Branch**: `main`
    - **Build Command**: *(leave empty)*
-   - **Publish Directory**: `.` (or `./`)
-5. Click **Create Static Site**.
+   - **Publish Directory**: `.`
+4. Click **Create Static Site**.
 
 ---
 
 ## 🛠 Local Development & Preview
 
-You can preview the site locally in any of the following ways:
+You can run and test the website locally in any of the following ways:
 
-- **Directly in Browser**: Double-click [index.html](index.html) or [Shivam_Portfolio.html](Shivam_Portfolio.html).
-- **Using Node / NPX**:
-  ```bash
-  npx serve .
-  ```
-  or:
-  ```bash
-  npm start
-  ```
-  and navigate to `http://localhost:3000`.
+### 1. Direct Browser Opening
+Double-click [`index.html`](index.html) or open it with your browser.
+
+### 2. Using VS Code Live Server
+Right-click [`index.html`](index.html) in VS Code and select **Open with Live Server**.
+
+### 3. Using Node / NPM
+```bash
+# Using npx (no install needed)
+npx serve .
+
+# Or using npm
+npm start
+```
+Then navigate to `http://localhost:3000` in your browser.
 
 ---
 
-## 🌐 Custom Domain (Optional)
+## 🌐 Custom Domain Setup (Optional)
 
-To connect your own domain (e.g. `yourname.dev`):
-1. In the Render Dashboard, go to your Static Site settings.
+To link your own custom domain (e.g. `shivamyadav.dev`):
+1. In your Render Dashboard, navigate to your Static Site settings.
 2. Under **Custom Domains**, click **Add Custom Domain**.
-3. Add your domain and update your DNS records (CNAME / ALIAS) as instructed by Render.
-Render will automatically provision and renew a free Let's Encrypt SSL certificate for you.
+3. Enter your domain name and follow Render's instructions to add CNAME/ALIAS records to your DNS provider.
+Render automatically generates and renews a free Let's Encrypt SSL certificate.
+
+---
+
+## 📬 Contact
+
+- **Name**: Shivam Yadav
+- **Degree**: B.Tech in Computer Science (2024 – 2028)
+- **Email**: [shivamyadav952004@gmail.com](mailto:shivamyadav952004@gmail.com)
+- **GitHub**: [github.com/shivam123yadav](https://github.com/shivam123yadav)
+- **LinkedIn**: [linkedin.com/in/](https://linkedin.com/)
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
