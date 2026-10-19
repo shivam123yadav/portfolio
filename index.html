@@ -254,7 +254,9 @@ p{margin:0}
 .now::before{
   content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;
   background:conic-gradient(from var(--ang),var(--a1),var(--a2),var(--a3),var(--a4),var(--a1));
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
   animation:spin 7s linear infinite;
 }
 @keyframes spin{to{--ang:360deg}}
@@ -338,7 +340,9 @@ section h2{font-size:clamp(2rem,4.6vw,3.3rem);font-weight:700;margin-bottom:26px
 .card::before{
   content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;z-index:3;opacity:0;transition:opacity .3s;
   background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),var(--a2),var(--a1) 45%,transparent 75%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
 }
 .card::after{
   content:"";position:absolute;inset:0;pointer-events:none;z-index:2;opacity:0;transition:opacity .3s;
