@@ -409,6 +409,17 @@ section h2{font-size:clamp(2rem,4.6vw,3.3rem);font-weight:700;margin-bottom:26px
 .s4 .bars b{height:auto;aspect-ratio:1;border-radius:6px;animation:twinkle 2.4s ease-in-out infinite;animation-delay:var(--d)}
 .s4 .bars b:nth-child(odd){background:var(--a3)}
 @keyframes twinkle{0%,100%{opacity:.35}50%{opacity:1}}
+
+/* real project screenshots: drop files into the images folder; the animated placeholder shows until they load */
+.shot img{
+  position:absolute;inset:22px 22px 0;width:calc(100% - 44px);height:calc(100% - 22px);
+  object-fit:cover;object-position:top left;display:block;z-index:1;
+  border:1px solid color-mix(in srgb,var(--fg) 12%,transparent);border-bottom:0;border-radius:11px 11px 0 0;
+  box-shadow:0 24px 50px -20px rgba(0,0,0,.5);
+  transform:translateY(var(--py,0px));transition:transform .5s cubic-bezier(.2,.8,.2,1);
+}
+.card:hover .shot img{transform:translateY(calc(var(--py,0px) - 6px))}
+.shot.has-img .win{display:none}
 @media (max-width:700px){
   .projects{grid-template-columns:minmax(0,1fr)}
   .card.feature{grid-template-columns:minmax(0,1fr)}
@@ -527,7 +538,7 @@ footer{
       <aside class="now" aria-label="What I am doing now">
         <header><span>~/now</span><span>updated Oct 2026</span></header>
         <dl>
-          <dt>building</dt><dd>CampusConnect v2</dd>
+          <dt>building</dt><dd>Agies AI</dd>
           <dt>learning</dt><dd>System design, Docker</dd>
           <dt>practicing</dt><dd>DSA in C++, daily</dd>
           <dt>reading</dt><dd>Designing Data-Intensive Applications</dd>
@@ -535,7 +546,7 @@ footer{
         </dl>
       </aside>
       <ul class="stats rv">
-        <li><b data-count="4">4</b><span>projects shipped</span></li>
+        <li><b data-count="3">3</b><span>projects built</span></li>
         <li><b data-count="12" data-suffix="+">12+</b><span>technologies used</span></li>
         <li><b data-count="300" data-suffix="+">300+</b><span>DSA problems solved</span></li>
         <li><b>5<small>/8</small></b><span>semester in progress</span></li>
@@ -572,13 +583,13 @@ footer{
 
           <div class="cell wide rv">
             <article class="card feature">
-              <div class="shot s1" aria-hidden="true"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="bars"><b></b><b></b><b></b><b></b><b></b></div></div></div>
+              <div class="shot s1"><div class="win" aria-hidden="true"><div class="dots"><i></i><i></i><i></i></div><div class="bars"><b></b><b></b><b></b><b></b><b></b></div></div><img src="images/agies-ai.png" alt="Agies AI screenshot" loading="lazy" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div>
               <div class="body">
-                <div class="meta"><span>Full-stack</span><span>2026</span></div>
-                <h3>CampusConnect</h3>
-                <p>Events, notes and club announcements for my college in one place. Students RSVP to events and share notes sorted by subject and semester.</p>
+                <div class="meta"><span>AI</span><span>2026</span></div>
+                <h3>Agies AI</h3>
+                <p>An AI-powered application I designed and built end to end, from the backend and model integration to the interface people use.</p>
                 <dl class="kv"><div><dt>Role</dt><dd>Solo</dd></div><div><dt>Status</dt><dd>In progress</dd></div></dl>
-                <ul class="chips"><li class="chip hot">React</li><li class="chip">Node.js</li><li class="chip">Express</li><li class="chip">MongoDB</li></ul>
+                <ul class="chips"><li class="chip hot">Python</li><li class="chip">FastAPI</li><li class="chip">LLM APIs</li></ul>
                 <div class="links"><a class="lnk" href="https://github.com/" target="_blank" rel="noopener">Live demo ↗</a><a class="lnk" href="https://github.com/" target="_blank" rel="noopener">Source code ↗</a></div>
               </div>
             </article>
@@ -586,13 +597,13 @@ footer{
 
           <div class="cell rv" style="--d:80ms">
             <article class="card">
-              <div class="shot s2" aria-hidden="true"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="bars"><b></b><b></b><b></b><b></b><b></b></div></div></div>
+              <div class="shot s3"><div class="win" aria-hidden="true"><div class="dots"><i></i><i></i><i></i></div><div class="bars"><b></b><b></b><b></b><b></b><b></b></div></div><img src="images/bitcoin-investigation.png" alt="Bitcoin Investigation System screenshot" loading="lazy" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div>
               <div class="body">
-                <div class="meta"><span>Real-time</span><span>2025</span></div>
-                <h3>Pulse</h3>
-                <p>A chat app with rooms, typing indicators and message history, built to understand how WebSockets scale.</p>
-                <dl class="kv"><div><dt>Role</dt><dd>Solo</dd></div><div><dt>Status</dt><dd>Shipped</dd></div></dl>
-                <ul class="chips"><li class="chip hot">Socket.io</li><li class="chip">Node.js</li><li class="chip">Redis</li></ul>
+                <div class="meta"><span>Blockchain · Security</span><span>2026</span></div>
+                <h3>Bitcoin Investigation System</h3>
+                <p>A tool for investigating Bitcoin activity. It follows transactions between wallets so suspicious patterns are easier to spot.</p>
+                <dl class="kv"><div><dt>Role</dt><dd>Solo</dd></div><div><dt>Status</dt><dd>In progress</dd></div></dl>
+                <ul class="chips"><li class="chip hot">Python</li><li class="chip">Flask</li><li class="chip">Graph analysis</li></ul>
                 <div class="links"><a class="lnk" href="https://github.com/" target="_blank" rel="noopener">Live demo ↗</a><a class="lnk" href="https://github.com/" target="_blank" rel="noopener">Code ↗</a></div>
               </div>
             </article>
@@ -600,28 +611,14 @@ footer{
 
           <div class="cell rv" style="--d:160ms">
             <article class="card">
-              <div class="shot s3" aria-hidden="true"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="bars"><b></b><b></b><b></b><b></b><b></b></div></div></div>
+              <div class="shot s4"><div class="win" aria-hidden="true"><div class="dots"><i></i><i></i><i></i></div><div class="bars"><b></b><b></b><b></b><b></b><b></b></div></div><img src="images/trustify.png" alt="Trustify screenshot" loading="lazy" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()"></div>
               <div class="body">
-                <div class="meta"><span>Algorithms</span><span>2025</span></div>
-                <h3>SortScope</h3>
-                <p>An algorithm visualizer that animates sorting and pathfinding step by step, with adjustable speed and input size.</p>
-                <dl class="kv"><div><dt>Role</dt><dd>Solo</dd></div><div><dt>Status</dt><dd>Shipped</dd></div></dl>
-                <ul class="chips"><li class="chip hot">JavaScript</li><li class="chip">Canvas</li><li class="chip">CSS</li></ul>
+                <div class="meta"><span>Full-stack</span><span>2026</span></div>
+                <h3>Trustify</h3>
+                <p>A web platform built around trust and verification, so people can check who and what they are dealing with online.</p>
+                <dl class="kv"><div><dt>Role</dt><dd>Solo</dd></div><div><dt>Status</dt><dd>In progress</dd></div></dl>
+                <ul class="chips"><li class="chip hot">React</li><li class="chip">Node.js</li><li class="chip">MongoDB</li></ul>
                 <div class="links"><a class="lnk" href="https://github.com/" target="_blank" rel="noopener">Live demo ↗</a><a class="lnk" href="https://github.com/" target="_blank" rel="noopener">Code ↗</a></div>
-              </div>
-            </article>
-          </div>
-
-          <div class="cell wide rv">
-            <article class="card feature">
-              <div class="shot s4" aria-hidden="true"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="bars"><b></b><b></b><b></b><b></b><b></b></div></div></div>
-              <div class="body">
-                <div class="meta"><span>Data</span><span>2024</span></div>
-                <h3>Budgetly</h3>
-                <p>An expense tracker for students that groups spending by category and charts each month against a budget.</p>
-                <dl class="kv"><div><dt>Role</dt><dd>Team of 3</dd></div><div><dt>Status</dt><dd>Prototype</dd></div></dl>
-                <ul class="chips"><li class="chip hot">Python</li><li class="chip">Flask</li><li class="chip">SQLite</li><li class="chip">Chart.js</li></ul>
-                <div class="links"><a class="lnk" href="https://github.com/" target="_blank" rel="noopener">Code ↗</a></div>
               </div>
             </article>
           </div>
@@ -670,11 +667,11 @@ footer{
         <ol class="timeline">
           <li class="current">
             <span class="when">2026 · Year 3</span>
-            <div><h3>Building and interview prep</h3><p>Working on CampusConnect v2, learning system design, and practicing DSA every day while applying for internships.</p></div>
+            <div><h3>Building and interview prep</h3><p>Working on Agies AI, Bitcoin Investigation System and Trustify, learning system design, and practicing DSA every day while applying for internships.</p></div>
           </li>
           <li>
             <span class="when">2025 · Year 2</span>
-            <div><h3>First full-stack projects</h3><p>Studied data structures, DBMS and OS. Shipped Pulse and SortScope and took part in my first hackathon.</p></div>
+            <div><h3>First full-stack projects</h3><p>Studied data structures, DBMS and OS, and took part in my first hackathon.</p></div>
           </li>
           <li>
             <span class="when">2024 · Year 1</span>
